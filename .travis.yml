@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+  - "3.9"
+  - "3.10"
+  - "3.11-dev"  # development branch
+  - "nightly"
+install:
+#  - pip install -r requirements.txt
+  - python setup.py install
+# command to run tests
+script:
+  - bin/maxfield-plan example/example_portals.txt --num_agents 3 --num_cpus 0 --verbose --output_csv

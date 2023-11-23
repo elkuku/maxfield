@@ -7,7 +7,7 @@ setup(
     author='Trey V. Wenger',
     author_email='tvwenger@gmail.com',
     packages=['maxfield'],
-    install_requires=['numpy', 'networkx', 'scipy', 'ortools', 'protobuf==3.19.4',
+    install_requires=['numpy<1.24.0', 'networkx', 'scipy', 'ortools', 'protobuf==4.25.0',
                       'matplotlib', 'imageio', 'pygifsicle'],
     scripts=['bin/maxfield-plan'],
 )
